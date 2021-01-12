@@ -28,6 +28,7 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 	Engine.run(engine);
+	
 	//Create the Bodies Here.
 	ground = new Ground(width/2,height,width,20);
 	mango1 = new Mango(1250,350);
@@ -95,4 +96,10 @@ function detectCollision(lstone,lmango){
 			console.log(lmango.body);
 		}
 
+}
+function keyPressed(){
+	if (keyCode === 32){
+		Matter.Body.setPosition(stone.body,{x:300,y:450});
+		chain.attach(stone.body);
+	}
 }

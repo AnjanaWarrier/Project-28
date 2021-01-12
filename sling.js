@@ -20,5 +20,7 @@ class Slingshot{
         line(pointA.x, pointA.y, pointB.x, pointB.y);
         }
     }
-   
+   attach(obj1){
+    this.sling.bodyA=obj1;
+   }
 }
